@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrowers</title>
+</head>
+<body>
+    <h3>{{ title }}</h3>
+    {% for friend in friends %}
+        <H4>{{ friend.full_name }}</H4>
+        <ul>
+        {% for book in friend.books.all %}
+
+            <li>{{book}}</li>
+        {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>
